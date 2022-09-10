@@ -1,0 +1,9 @@
+https://restcountries.com/
+
+https://accounts.spotify.com/api/token
+
+BQCrgWMXMPxAkITgX6UaD8u8AeH_Q8CwJA6_nOqlhCEy6hmpCj9tCihVQIweRt-YDqWoTQQhNitwzALV9Ev22HO20CMgviVCDVrSODjXFEHftqn0zWw
+
+para generar un servicio en angular
+
+ng g service services/spotify

@@ -1,0 +1,158 @@
+<h1 class="mt-3">Pipes <small>Angular</small></h1>
+<hr>
+<!-- PIPES -->
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead class="thead-dark">
+        <!-- //fila -->
+        <tr>
+          <!-- //encabezados tabla -->
+          <th> Variable </th>
+          <th> Pipe </th>
+          <th> Salida </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{nombre}}</td>
+          <td>UpperCase</td>
+          <td>{{nombre | uppercase}} </td>
+        </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td>LowerCase</td>
+          <td>{{nombre | lowercase}} </td>
+        </tr>
+        <tr>
+          <td>{{nombre2}}</td>
+          <td>capitalizado</td>
+          <td>{{nombre2 | capitalizado}} </td>
+        </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td>Slice:3</td>
+          <td>{{nombre | slice:3}} </td>
+        </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td>Slice 0:3</td>
+          <td>{{nombre | slice:0:3}} </td>
+        </tr>
+        <tr>
+          <td>{{array}}</td>
+          <td>Slice :1:5</td>
+          <td>{{array | slice:1:5}} </td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td>Number 1.0-0</td>
+          <td>{{PI | number:'1.0-0'}} </td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td>Number .0-2</td>
+          <td>{{PI | number:'.0-2'}} </td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td>Percent </td>
+          <td>{{porcentaje | percent}} </td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td>Percent 2.2-2 </td>
+          <td>{{porcentaje | percent:'2.2-2'}} </td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency</td>
+          <td>{{salario | currency}} </td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency:'EUR'</td>
+          <td>{{salario | currency:'EUR'}} </td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency:'CAD':'symbol':'.0-0'</td>
+          <td>{{salario | currency:'CAD':'symbol':'.0-0'}} </td>
+        </tr>
+        <tr>
+          <td>{{valorPromesa}}</td>
+          <td>Async </td>
+          <td>{{valorPromesa | async}} </td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date </td>
+          <td>{{fecha | date}} </td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'medium' </td>
+          <td>{{fecha | date:'medium'}} </td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'short' </td>
+          <td>{{fecha | date:'short'}} </td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'dd/MM/yyyy' </td>
+          <td>{{fecha | date:'dd/MM/yyyy'}} </td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'dd/MMMM/yyyy' </td>
+          <td>{{fecha | date:'dd/MMMM/yyyy'}} </td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'MMMM'</td>
+          <td>{{fecha | date:'MMMM'}} </td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'MMMM':'':'{{idioma}}'
+            <br>
+            <button class="mr-1 btn btn-primary" (click)="cambiarIdioma('es')"> Español </button>
+            <button (click)="cambiarIdioma('en')" class="mr-1 btn btn-secondary"> Ingles </button>
+            <button (click)="cambiarIdioma('fr')" class="mr-1 btn btn-success"> Frances </button>
+          </td>
+          <td>{{fecha | date:'MMMM':'':idioma}} </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- SLICE -->
+    <hr>
+    <h4>Slice</h4>
+    <ul>
+      <li *ngFor="let item of array | slice :5:20">
+        {{item}}
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- JSON -->
+<h3>JSON </h3>
+<hr>
+<div class="row mb-5">
+  <div class="col">
+    <pre>
+      {{heroe | json}}
+    </pre>
+  </div>
+</div>
+
+<h3 class="mt-4 ">DomSeguro</h3>
+<hr>
+<div class="row mb-5">
+  <div class="col">
+    <iframe width="560" height="315" [src]="videoUrl" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>
