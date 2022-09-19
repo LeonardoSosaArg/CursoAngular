@@ -1,0 +1,25 @@
+<div class="container mt-3">
+<button class="btn btn-warning mb-3" (click)="mostrarOcultar()">Mostrar/Ocultar Listado</button>
+<table id="table" class="table table-dark table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Paciente ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">DNI</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paciente of listado">
+        <td>{{paciente.PacienteId}}</td>
+        <td>{{paciente.Nombre}}</td>
+        <td>{{paciente.DNI}}</td>
+        <td>{{paciente.Telefono}}</td>
+        <td>{{paciente.Correo}}</td>
+      </tr>   
+    </tbody>
+  </table>
+  <hr>
+<button class="btn btn-primary" (click)="nuevaPersona()">Nueva Persona</button>
+</div>
