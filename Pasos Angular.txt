@@ -1,0 +1,11 @@
+npm install -g npm
+npm init -y
+npm i express
+npm i nodemon -d
+npm install -g @angular/cli
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+Dentro del tsconfig.json 
+"strictProperyInitialization" : false,
+
