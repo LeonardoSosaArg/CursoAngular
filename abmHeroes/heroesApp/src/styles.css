@@ -1,0 +1,52 @@
+.main-container {
+  margin-top: 40px;
+  margin-bottom: 150px;
+}
+
+.puntero {
+  cursor: pointer;
+}
+
+.w120 {
+  width: 120px;
+}
+
+/* Animaciones */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+body {
+  background: #8e9eab;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #eef2f3, #8e9eab);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #eef2f3, #8e9eab);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}

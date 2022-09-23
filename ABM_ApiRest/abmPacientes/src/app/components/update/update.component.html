@@ -1,0 +1,44 @@
+<div class="container mt-3">
+    <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)">
+        <div class="form-group row">
+            <div class="col">
+            <label for="">Nombre</label>
+            <input type="text" class="form-control" placeholder="" formControlName="nombre" >
+        </div>
+        <div class="col">
+            <label for="">DNI</label>
+            <input type="text" class="form-control" placeholder="" formControlName="dni" >
+        </div>
+        <div class="col">
+            <label for="">Correo</label>
+            <input type="text" class="form-control" placeholder="" formControlName="correo" >
+        </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+            <label for="">Codigo Postal</label>
+            <input type="text" class="form-control" placeholder="" formControlName="codigoPostal" >
+        </div>
+        <div class="col">
+            <label for="">Genero</label>
+            <input type="text" class="form-control" placeholder="" formControlName="genero" >
+        </div>
+        <div class="col">
+            <label for="">Telefono</label>
+            <input type="text" class="form-control" placeholder="" formControlName="telefono" >
+        </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <label for="">Direccion</label>
+                <input type="text" class="form-control" placeholder="" formControlName="direccion" >
+            </div>
+            <div class="col">
+            <label for="">Fecha Nacmimiento</label>
+            <input type="text" class="form-control" placeholder="" formControlName="fechaNacimiento" >
+        </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>

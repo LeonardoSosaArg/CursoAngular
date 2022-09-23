@@ -1,0 +1,24 @@
+
+<div class="wrapper fadeInDown color-fondo">
+  <div id="formContent" class="">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first py-5">
+      <img src="../../../assets/img/banner-ico.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" >
+      <input type="text" id="login" class="fadeIn second"  placeholder="Email" formControlName="usuario">
+      <input type="password" id="password" class="fadeIn third" placeholder="Password" formControlName="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div class="alert alert-danger mt-3" *ngIf="errorStatus">
+        <p>{{errorMsj}}</p>
+      </div>
+
+  </div>
+</div>

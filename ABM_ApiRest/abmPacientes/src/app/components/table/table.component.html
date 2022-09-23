@@ -1,0 +1,25 @@
+<div class="container mt-3">
+    <h3 class="text-center"> Lista de Pacientes</h3>
+    <hr>
+    <button class="btn btn-primary mb-2" (click)="nuevoRegistro()" >Nuevo Registro</button>
+  <table class="table align-middle table-hover table-primary table-striped">
+    <thead>
+      <tr>
+        <th scope="col">PacienteId</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">DNI</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paciente of listaPacientes" (click)="editarPaciente(paciente.PacienteId)">
+        <th scope="row">{{paciente.PacienteId}}</th>
+        <td>{{paciente.Nombre}}</td>
+        <td>{{paciente.DNI}}</td>
+        <td>{{paciente.Telefono}}</td>
+        <td>{{paciente.Correo}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

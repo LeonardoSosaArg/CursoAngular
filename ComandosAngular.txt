@@ -1,0 +1,22 @@
+Comandos Angular
+
+ng new nombreApp
+
+primero el nombre carpeta / despues nombre del componente
+ng g c components/navbar
+
+con click derecho sobre el archivi + copy relative path
+OBTENEMOS LA RUTA DEL ARCHIVO
+
+Libreria rxjs = utiliza metodos asincronos basados en eventos usando
+secuencias observables. 
+
+OBSERVABLE (STREAM DE DATOS = SECUENCIA DE EVENTOS ORDENADOS EN EL TIEMPO)
+
+SUBSCRIBER ----> SUBSCRIBE ----> OBSERVABLE
+
+CUANDO HACEMOS UNA LLAMADA A LA API RECIBIMOS UN OBSERVABLE
+
+
+
+
