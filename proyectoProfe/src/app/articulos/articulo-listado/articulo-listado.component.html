@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-primary" (click)="nuevoArticulo()">Nuevo</button>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">#</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let articulo of listado">
+            <th scope="row">{{ articulo.id }}</th>
+            <th scope="row">{{ articulo.codigo }}</th>
+            <td>{{ articulo.nombre }}</td>
+            <td>{{ articulo.precio }}</td>
+            <td>{{ articulo.stock }}</td>
+            <td>{{ articulo.categoria?.nombre }}</td>
+            <td>
+                <i class="bi bi-pencil" (click)="actualizarArticulo(articulo.id)"></i>
+                <app-articulo-baja [id]="articulo.id" (onEliminar)="actualizarListado()">
+                </app-articulo-baja>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,35 @@
+<form>
+    <div class="mb-3">
+        <label for="inputCodigo" class="form-label">Código</label>
+        <input type="number" name="codigo" class="form-control" id="inputCodigo" [disabled]="true"
+            [(ngModel)]="articulo.codigo">
+    </div>
+    <div class="mb-3">
+        <label for="inputNombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="inputNombre" name="nombre"
+            [(ngModel)]="articulo.nombre">
+    </div>
+    <div class="mb-3">
+        <label for="inputPrecio" class="form-label">Precio</label>
+        <input type="number" class="form-control" id="inputPrecio" name="precio"
+        [(ngModel)]="articulo.precio">
+    </div>
+    <div class="mb-3">
+        <label for="inputStock" class="form-label">Stock</label>
+        <input type="number" class="form-control" id="inputStock" name="stock" 
+        [(ngModel)]="articulo.stock">
+    </div>
+    <div class="mb-3">
+        <label for="selectCat" class="form-label">Categoría</label>
+        <select class="form-select" name="categoriaId" [(ngModel)]="articulo.categoriaId">
+            <option *ngFor="let categoria of categorias" [ngValue]="categoria.id">
+                {{ categoria.nombre }}
+            </option>
+        </select>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
+        <button type="submit" class="btn btn-primary" (click)="guardar()">Guardar</button>
+    </div>
+</form>

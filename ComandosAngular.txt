@@ -19,4 +19,22 @@ CUANDO HACEMOS UNA LLAMADA A LA API RECIBIMOS UN OBSERVABLE
 
 
 
+this.editarForm.controls['nombre'].setValue(this.datosPaciente.Nombre);
 
+<select name="" id="">
+        <option *ngFor="let categoria of listaCategorias" value="{{catergoria.id}}">{{categoria.nombre}}</option>
+    </select>
+
+<select [(ngModel)]="producto.categoriaId" name="categoria"> 
+                <option  *ngFor="let categoria of categorias" value="{{categoria.id}}">{{categoria.nombre}}</option>
+            </select>
+
+<div class="alert alert-info text-center mt-3">
+<h4 class="alert-heading">Cargando</h4>
+<p>
+    <i class="fa fa-sync-alt fa-spin fa-2x"></i>
+</p>
+<p class="mb-0">
+    Espere por favor
+</p>
+</div>
