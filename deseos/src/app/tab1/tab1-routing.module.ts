@@ -7,9 +7,9 @@ const routes: Routes = [
     path: '',
     component: Tab1Page,
   },
-  {//AGREGAMOS LA RUTA HIJA PARA RANDERIZAR EL NUEVO COMPONENTE DENTRO
+   {
     path: 'agregar',
-    loadChildren: () => import('../agregar/agregar.module').then( m => m.AgregarPageModule)
+    loadChildren: () => import('../pages/agregar/agregar.module').then( m => m.AgregarPageModule)
   }
 ];
 
